@@ -1,0 +1,181 @@
+/* V --- My Fonts --- V
+font-family: 'Fredoka One', cursive;
+font-family: 'Lora', serif; */
+
+/* V CSS Reset V */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* ______________________________________V MAIN CONTAINER V _________________________________________ */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to right, #FFF130 0%, #FFA938 50%, #C20202 100%);
+}
+
+/* ______________________________________V 2 Main Divs V _________________________________________ */
+/* __________________V TITLE CONTAINER V _____________________ */
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12vmin;
+  width: auto;
+  margin: 1vmin;
+}
+
+h2 {
+  font-family: var(--mainFont);
+  font-size: 12vmin;
+  color: rgb(49, 49, 49);
+  text-shadow: 2px 2px 3px white, 6px 2px 6px whitesmoke;
+}
+
+/* __________________V GAME CONTAINER V _____________________ */
+.gameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: auto;
+}
+
+.textContainer {
+  display: flex;
+  align-items: center;
+  height: 12vmin;
+  color: rgb(49, 49, 49);
+  text-shadow: 2px 2px 3px white, 3px 2px 4px whitesmoke;
+  margin: 1vmin;
+}
+
+#playerIndicator {
+  font-family: var(--bodyFont);
+  font-size: 5vmin;
+  text-shadow: 22px, 22px, green;
+}
+
+#game {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 71vmin;
+  height: 71vmin;
+  background-color: rgb(28, 28, 128);
+  border: 6.1px solid rgba(0, 0, 0, .1);
+  border-radius: 12px;
+  box-shadow: 0px 0px 21px 9px rgba(0, 0, 0, 0.41);
+}
+
+/* game board table */
+#board td {
+  display: flex;
+  width: 9.6vmin;
+  height: 9.6vmin;
+  border: 2px solid rgb(49, 49, 49);
+  background-color: whitesmoke;
+}
+
+tr {
+  display: flex;
+  border-radius: 50%;
+}
+
+td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: inset 3px 3px 4.7px rgb(49, 49, 49);
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+.player1 {
+  /* TODO: make into circles */
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin: 5px;
+  width: 90%;
+  height: 90%;
+  border: 2.1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  background-color: #C20202;
+  box-shadow: 3px 3px 4.7px rgb(49, 49, 49);
+}
+
+.player2 {
+  /* TODO: make into circles */
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin: 5px;
+  width: 90%;
+  height: 90%;
+  border: 2.1px solid rgba(0, 0, 0, .6);
+  border-radius: 50%;
+  background-color: #FFF130;
+  box-shadow: 3px 3px 4.7px rgb(49, 49, 49);
+}
+
+/* TODO: make pieces red/blue,  depending on player 1/2 piece */
+/* column-top is table row of clickable areas for each column */
+#column-top td {
+  border-radius: 50%;
+  border: dashed 3px rgb(28, 28, 128);
+}
+
+#column-top td:hover {
+  background-color: rgb(80, 136, 80);
+}
+
+/* ______________________________________V Custom Css V _________________________________________ */
+:root {
+  --mainFont: 'Fredoka One', cursive;
+  --bodyFont: 'Lora', serif;
+}
